@@ -77,7 +77,8 @@ def main() -> None:
         for p in ("advancedFormat", "customParseFormat", "localeData",
                   "quarterOfYear", "weekOfYear", "weekYear", "weekday")
     )
-    readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
+    # 内嵌完整手册（README.md 为仓库简介，全文在 docs/MANUAL.md，与网页版一致）
+    readme_text = (ROOT / "docs" / "MANUAL.md").read_text(encoding="utf-8")
 
     html = (
         template

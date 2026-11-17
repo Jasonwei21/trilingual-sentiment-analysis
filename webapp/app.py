@@ -221,7 +221,7 @@ def favicon():
     return send_from_directory(app.static_folder, "favicon.ico")
 
 
-# ---------- 使用指南（Vue + marked 内建 md 阅读器，/files/readme.md 提供正文）----------
+# ---------- 使用指南（Vue + marked 内建 md 阅读器，正文取 docs/MANUAL.md）----------
 @app.get("/manual")
 def manual_page():
     return send_from_directory(app.static_folder, "manual.html")
@@ -229,7 +229,8 @@ def manual_page():
 
 @app.get("/files/readme.md")
 def readme_file():
-    return send_from_directory(ROOT, "README.md", as_attachment=True)
+    # 应用内「使用指南」正文：完整手册（README.md 为仓库简介，全文见 docs/MANUAL.md）
+    return send_from_directory(ROOT / "docs", "MANUAL.md", as_attachment=True)
 
 
 # ---------- 心跳与自动退出（打包版：关闭浏览器标签页即退出） ----------
