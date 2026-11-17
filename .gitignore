@@ -1,0 +1,24 @@
+# ===== 构建产物 =====
+build/
+dist/
+output/
+*.zip
+__pycache__/
+*.pyc
+*.pyo
+
+# ===== 依赖 =====
+node_modules/
+
+# ===== 生成物（可由 tools/ 重建） =====
+三语情感极性分析-便携版.html
+
+# ===== 编辑器 / 系统 =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 日志 =====
+*.log

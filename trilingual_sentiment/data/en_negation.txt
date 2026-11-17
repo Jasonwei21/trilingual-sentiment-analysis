@@ -1,0 +1,12 @@
+# English negation words (one per line; flip polarity within the window)
+not
+no
+never
+neither
+nor
+nobody
+nothing
+nowhere
+none
+cannot
+n't

@@ -1,0 +1,7 @@
+# 三语情感极性分析台 依赖清单
+# 词典/规则为内置数据文件，无需额外下载
+flask>=3.0
+jieba>=0.42
+fugashi>=1.3
+unidic-lite>=1.0
+markdown>=3.4

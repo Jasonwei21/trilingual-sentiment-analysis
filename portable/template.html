@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三语情感极性分析台 · 便携版</title>
+<style>
+/*__RESET_CSS__*/
+</style>
+</head>
+<body>
+<div id="app-analysis"></div>
+
+<div id="manualOverlay" hidden style="position:fixed;inset:0;background:rgba(17,24,39,.5);z-index:60;overflow:auto;padding:24px 12px">
+  <div style="max-width:1100px;margin:0 auto;background:#f4f5f7;border-radius:14px;padding:10px 10px 24px">
+    <div style="text-align:right;padding:6px 12px">
+      <button id="closeManual" style="border:1px solid #e5e7eb;background:#fff;color:#1f2430;border-radius:999px;padding:5px 16px;font-size:13px;cursor:pointer">关闭 ✕</button>
+    </div>
+    <div id="app-manual"></div>
+  </div>
+</div>
+
+<div id="lexiconOverlay" hidden style="position:fixed;inset:0;background:rgba(17,24,39,.5);z-index:60;overflow:auto;padding:24px 12px">
+  <div style="max-width:1100px;margin:0 auto;background:#f4f5f7;border-radius:14px;padding:10px 10px 24px">
+    <div style="text-align:right;padding:6px 12px">
+      <button id="closeLexicon" style="border:1px solid #e5e7eb;background:#fff;color:#1f2430;border-radius:999px;padding:5px 16px;font-size:13px;cursor:pointer">关闭 ✕</button>
+    </div>
+    <div id="app-lexicon"></div>
+  </div>
+</div>
+
+<script>window.__PORTABLE__ = true;</script>
+<script>
+/*__VUE__*/
+</script>
+<script>
+/*__DAYJS__*/
+</script>
+<script>
+/*__DAYJS_PLUGINS__*/
+</script>
+<script>
+/*__ANTD__*/
+</script>
+<script>
+/*__MARKED__*/
+</script>
+<script>
+/*__ENGINE__*/
+</script>
+<script>
+/*__DATA__*/
+</script>
+<script>
+/*__README__*/
+</script>
+<script>
+/*__APPJS__*/
+</script>
+<script>
+  document.getElementById("closeManual").addEventListener("click", function () {
+    document.getElementById("manualOverlay").hidden = true;
+  });
+  document.getElementById("closeLexicon").addEventListener("click", function () {
+    document.getElementById("lexiconOverlay").hidden = true;
+  });
+  ["manualOverlay", "lexiconOverlay"].forEach(function (id) {
+    document.getElementById(id).addEventListener("click", function (e) {
+      if (e.target === this) this.hidden = true;
+    });
+  });
+</script>
+</body>
+</html>
