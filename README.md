@@ -6,6 +6,10 @@
 
 ---
 
+## 👤 作者
+
+硕士在读，平时喜欢 vibe coding 一些小东西。
+
 ## ✨ 功能特性
 
 - 🌐 **自动识别语言** —— 中 / 日 / 英混着写也认得出，逐句分析
@@ -87,10 +91,6 @@ bash packaging/build_mac.command                  # 打 macOS 包
 - **换词典**：编辑 `trilingual_sentiment/data/*.csv`，或用加载器接入 HowNet / MPQA / 単語感情極性対応表 原始格式
 - **调规则**：否定词 `*_negation.txt`、程度词 `*_degree.csv`，窗口与上限在 `SentimentAnalyzer(...)` 配置
 - **API**：`POST /api/analyze {"text": "..."}` → 倾向分 / 标签 / 逐句明细；Python API 见 [docs/MANUAL.md](docs/MANUAL.md)
-
-## 👤 作者
-
-硕士在读，平时喜欢 vibe coding 一些小东西。
 
 ## 🙏 鸣谢
 
